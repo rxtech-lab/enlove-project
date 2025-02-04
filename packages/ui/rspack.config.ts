@@ -21,7 +21,6 @@ export default defineConfig({
     extensions: [".ts", ".js", ".json", ".tsx"],
   },
   experiments: {
-    css: true,
     outputModule: true,
   },
   externals: [
@@ -38,8 +37,8 @@ export default defineConfig({
     rules: [
       {
         test: /\.css$/,
-        use: ["postcss-loader"],
-        type: "css",
+        use: ["style-loader", "css-loader", "postcss-loader"],
+        type: "javascript/auto",
       },
       {
         test: /\.(ts|tsx)$/,
