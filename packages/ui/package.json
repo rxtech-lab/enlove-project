@@ -1,28 +1,41 @@
 {
-  "name": "@repo/ui",
+  "name": "@rx-lab/enlove-ui",
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./button": "./src/button.tsx",
-    "./card": "./src/card.tsx",
-    "./code": "./src/code.tsx"
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "default": "./dist/main.js"
+    },
+    "./styles.css": "./dist/main.css"
   },
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component",
-    "check-types": "tsc --noEmit"
+    "build": "rspack build && tsc --emitDeclarationOnly"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@rspack/cli": "^1.2.2",
+    "@rspack/core": "^1.2.2",
     "@turbo/gen": "^2.4.0",
     "@types/node": "^22.13.0",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
+    "ts-node": "^10.9.2",
     "typescript": "5.7.3"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.0.3",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "postcss-loader": "^8.1.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  }
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.3"
+  },
+  "main": "dist/main.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ]
 }
