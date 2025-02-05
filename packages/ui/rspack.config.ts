@@ -27,6 +27,9 @@ export default defineConfig({
     // Add React as external to avoid bundling it
     "react",
     "react-dom",
+    // Add framer-motion to externals
+    "framer-motion",
+    /^framer-motion\/.*/,
   ],
   plugins: [
     new rspack.ProvidePlugin({
