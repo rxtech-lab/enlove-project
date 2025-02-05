@@ -9,7 +9,7 @@ export default defineConfig({
   },
   output: {
     filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "dist", "lib"),
     library: {
       type: "module",
     },
@@ -55,16 +55,6 @@ export default defineConfig({
                   jsx: true,
                 },
                 target: "es2015",
-              },
-              // Modify typescript options
-              typescript: {
-                enabled: true,
-                declaration: true,
-                declarationDir: "./dist/types",
-                // Add module resolution
-                module: {
-                  type: "es6",
-                },
               },
             },
           },
