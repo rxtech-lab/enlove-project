@@ -11,7 +11,8 @@
     "@rx-lab/enlove-ui": "workspace:*",
     "framer-motion": "^12.1.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "web3-connect-react": "^0.6.6"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",
